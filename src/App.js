@@ -160,7 +160,7 @@ export default function GuestList() {
         <div>
           <h2>Add a New Guest to the List:</h2>
           <form name="form" onSubmit={addNewGuest}>
-            <label>
+            <label htmlFor="first-name">
               First Name
               <input
                 value={firstName}
@@ -168,7 +168,7 @@ export default function GuestList() {
               />
             </label>
             <br />
-            <label>
+            <label htmlFor="last-name">
               Last Name
               <input
                 value={lastName}
