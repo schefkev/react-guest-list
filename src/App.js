@@ -72,7 +72,7 @@ export default function GuestList() {
     const allGuests = await response.json();
     setGuests(allGuests);
     setLoading(false); // Updating the loading to false once api is fetched
-    setIsDisabled(false); // Updating the disabled to false once api is fetched
+    /* setIsDisabled(false); */ // Updating the disabled to false once api is fetched
     console.log('fetching the guest list');
   };
 
