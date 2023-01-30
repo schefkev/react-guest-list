@@ -161,7 +161,7 @@ export default function GuestList() {
           <h2>Add a New Guest to the List:</h2>
           <form name="form" onSubmit={addNewGuest}>
             <label htmlFor="first-name">
-              First Name
+              First name
               <input
                 value={firstName}
                 onChange={(e) => setFirstName(e.currentTarget.value)}
@@ -169,7 +169,7 @@ export default function GuestList() {
             </label>
             <br />
             <label htmlFor="last-name">
-              Last Name
+              Last name
               <input
                 value={lastName}
                 onChange={(e) => setLastName(e.currentTarget.value)}
