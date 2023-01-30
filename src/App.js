@@ -61,7 +61,7 @@ export default function GuestList() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [loading, setLoading] = useState(true); // This is the state for the loader to show message on Loading
-  /* const [isDisabled, setIsDisabled] = useState(true); */ // This is the state for the Disabling of the form field
+  const [isDisabled, setIsDisabled] = useState(true); // This is the state for the Disabling of the form field
 
   /* BASE URL */
   const baseUrl =
@@ -73,7 +73,7 @@ export default function GuestList() {
     const allGuests = await response.json();
     setGuests(allGuests);
     setLoading(false); // Updating the loading to false once api is fetched
-    /* setIsDisabled(false); */ // Updating the disabled to false once api is fetched
+    setIsDisabled(false); // Updating the disabled to false once api is fetched
     console.log('fetching the guest list');
   };
 
@@ -152,10 +152,10 @@ export default function GuestList() {
   return loading ? (
     <>
       <h1>Loading...</h1>
-      {/* <form disabled={isDisabled} /> */}
+      <form disabled={isDisabled} />
     </>
   ) : (
-    <div css={divContainerFlex} data-test-id="guest">
+    <div css={divContainerFlex}>
       <h1 css={divFloatCenter}>Guest List</h1>
       <div css={divFloatLeft} className="main-content">
         <div>
@@ -193,7 +193,7 @@ export default function GuestList() {
             <h2>GUESTS:</h2>
             {guests.map((list) => {
               return (
-                <div css={borderBoxStyles} key={list.id}>
+                <div css={borderBoxStyles} key={list.id} data-test-id="guest">
                   <ul>
                     <li>
                       <div css={textStyles}>
