@@ -64,7 +64,8 @@ export default function GuestList() {
   /* const [isDisabled, setIsDisabled] = useState(true); */ // This is the state for the Disabling of the form field
 
   /* BASE URL */
-  const baseUrl = 'http://localhost:4000';
+  const baseUrl =
+    'https://express-guest-list-api-memory-data-store-1.schefkev.repl.co';
 
   /* FETCHING THE API */
   const getAllGuest = async () => {
@@ -160,7 +161,7 @@ export default function GuestList() {
         <div>
           <h2>Add a New Guest to the List:</h2>
           <form name="form" onSubmit={addNewGuest}>
-            <label htmlFor="first-name">
+            <label>
               First name
               <input
                 value={firstName}
@@ -168,7 +169,7 @@ export default function GuestList() {
               />
             </label>
             <br />
-            <label htmlFor="last-name">
+            <label>
               Last name
               <input
                 value={lastName}
