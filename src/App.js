@@ -3,11 +3,6 @@ import './App.css';
 import { css } from '@emotion/react';
 import React, { useEffect, useState } from 'react';
 
-/* const layoutStyles = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`; */
 const divContainerFlex = css`
   display: flex;
 `;
@@ -127,9 +122,6 @@ export default function GuestList() {
       return i.id !== updatedGuest.id;
     });
     setGuests([...guests], updatedGuestList);
-    getAllGuest().catch(() => {
-      console.log('updating the attendance went south');
-    });
   };
 
   /* DELETING A GUEST FROM THE ARRAY */
